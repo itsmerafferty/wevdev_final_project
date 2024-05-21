@@ -1,0 +1,948 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px
+}
+
+body::-webkit-scrollbar {
+    width: 5px
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1f2024
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffff
+}
+
+body::-webkit-scrollbar-thumb:window-inactive {
+    background: #ffff
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%
+}
+
+section {
+    overflow: hidden
+}
+
+.navigation {
+    padding: .75rem 1.7rem;
+    height: auto;
+    width: max-content;
+    max-width: 100%;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    bottom: 3.5dvh;
+    margin: auto;
+    box-shadow: #0000003d 0 3px 8px;
+    background: rgba(0, 0, 0, .61);
+    border-radius: 3rem;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    gap: .8rem;
+    transition: .3s
+}
+
+.navigation .circle {
+    padding: .75rem;
+    border-radius: 50%;
+    height: auto;
+    width: auto
+}
+
+.navigation .circle:hover {
+    cursor: pointer;
+    background-color: #31313171 !important
+}
+
+.navigation .circle img {
+    height: 1.2rem
+}
+
+.App,
+.titleText,
+.gridBackground {
+    transition: .3s
+}
+
+.gridBackground {
+    box-shadow: 0 4px 4px #00000040
+}
+
+@media screen and (max-width: 700px) {
+    .heroSection>.container .topContainer .content-1 .services .servicesContainer .box:hover,
+    .heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .myLocation img:hover {
+        opacity: 100% !important
+    }
+    .heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer .socialContainer img:hover {
+        height: 3rem !important
+    }
+    .heroSection>.container .bottomContainer .content-1 .top .seeAll:hover {
+        color: #8b898c !important;
+        text-decoration: none !important
+    }
+    .heroSection>.container .bottomContainer .content-1 .projectsContainer .cardBox:hover {
+        box-shadow: #1d78f066 5px 5px !important
+    }
+}
+.heroSection {
+    width: 100%;
+    transition: .3s ease;
+    background-color: #292929
+}
+
+.heroSection>.container {
+    padding: 2rem;
+    padding-bottom: 0;
+    max-width: 1850px;
+    width: 95vw
+}
+
+.heroSection>.container .topContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem
+}
+
+.heroSection>.container .topContainer .content-1 {
+    width: 52.875rem
+}
+
+.heroSection>.container .topContainer .content-1 .banner {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    width: calc(100% - 4rem);
+    border-radius: 1.25rem;
+    background-color: #1e1b1e
+}
+
+.heroSection>.container .topContainer .content-1 .banner p {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700
+}
+
+.heroSection>.container .topContainer .content-1 .banner p span {
+    color: #436be2
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button {
+    --color: #ffff;
+    --background: #436BE2;
+    --background-hover: #5c94d4;
+    --background-left: #4e5674;
+    --folder: #F3E9CB;
+    --folder-inner: #BEB393;
+    --paper: #FFFFFF;
+    --paper-lines: #BBC1E1;
+    --paper-behind: #E1E6F9;
+    --pencil-cap: #fff;
+    --pencil-top: #275EFE;
+    --pencil-middle: #fff;
+    --pencil-bottom: #5C86FF;
+    --shadow: rgba(13, 15, 25, .2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: .4rem;
+    -webkit-tap-highlight-color: transparent;
+    padding: 17px 29px 17px 69px;
+    transition: .3s;
+    color: var(--color);
+    background: var(--bg, var(--background));
+    float: right;
+    margin-top: -0rem;
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button p {
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 53px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: .4rem 0 0 .4rem;
+    background: var(--background-left);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder {
+    width: 23px;
+    height: 27px;
+    position: absolute;
+    left: 15px;
+    top: 13px
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .top {
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    transform: translate(var(--fx, 0));
+    transition: transform .4s ease var(--fd, .3s)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .top svg {
+    width: 24px;
+    height: 27px;
+    display: block;
+    fill: var(--folder);
+    transform-origin: 0 50%;
+    transition: transform .3s ease var(--fds, .45s);
+    transform: perspective(120px) rotateY(var(--fr, 0deg))
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder:before,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder:after,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper {
+    content: "";
+    position: absolute;
+    left: var(--l, 0);
+    top: var(--t, 0);
+    width: var(--w, 100%);
+    height: var(--h, 100%);
+    border-radius: 1px;
+    background: var(--b, var(--folder-inner))
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder:before {
+    box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+    transform: translate(var(--fx, 0));
+    transition: transform .4s ease var(--fd, .3s)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder:after,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper {
+    --l: 1px;
+    --t: 1px;
+    --w: 21px;
+    --h: 25px;
+    --b: var(--paper-behind)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder:after {
+    transform: translate(var(--pbx, 0), var(--pby, 0));
+    transition: transform .4s ease var(--pbd, 0s)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper {
+    z-index: 1;
+    --b: var(--paper)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper:before,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper:after {
+    content: "";
+    width: var(--wp, 14px);
+    height: 2px;
+    border-radius: 1px;
+    transform: scaleY(.5);
+    left: 3px;
+    top: var(--tp, 3px);
+    position: absolute;
+    background: var(--paper-lines);
+    box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .folder .paper:after {
+    --tp: 6px;
+    --wp: 10px
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .pencil {
+    height: 2px;
+    width: 3px;
+    border-radius: 1px 1px 0 0;
+    top: 8px;
+    left: 105%;
+    position: absolute;
+    z-index: 3;
+    transform-origin: 50% 19px;
+    background: var(--pencil-cap);
+    transform: translate(var(--pex, 0)) rotate(35deg);
+    transition: transform .4s ease var(--pbd, 0s)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .pencil:before,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .pencil:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+    width: var(--w, 5px);
+    height: var(--h, 20px);
+    border-radius: var(--br, 2px 2px 0 0);
+    top: var(--t, 2px);
+    left: var(--l, -1px)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .pencil:before {
+    -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+    clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button>div .pencil:after {
+    --b: none;
+    --w: 3px;
+    --h: 6px;
+    --br: 0 2px 1px 0;
+    --t: 3px;
+    --l: 3px;
+    border-top: 1px solid var(--pencil-top);
+    border-right: 1px solid var(--pencil-top)
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button:before,
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--color);
+    transform-origin: 9px 1px;
+    transform: translate(var(--cx, 0)) scale(.5) rotate(var(--r, -45deg));
+    top: 26px;
+    right: 16px;
+    transition: transform .3s
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button:after {
+    --r: 45deg
+}
+
+.heroSection>.container .topContainer .content-1 .banner .downloadCV-button:hover {
+    --cx: 2px;
+    --bg: var(--background-hover);
+    --fx: -40px;
+    --fr: -60deg;
+    --fd: .15s;
+    --fds: 0s;
+    --pbx: 3px;
+    --pby: -3px;
+    --pbd: .15s;
+    --pex: -24px
+}
+
+.heroSection>.container .topContainer .content-1 .services {
+    margin-top: 1.25rem
+}
+
+.heroSection>.container .topContainer .content-1 .services .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff
+}
+
+.heroSection>.container .topContainer .content-1 .services .divider {
+    margin-top: .75rem;
+    width: 7.5rem;
+    height: .3rem;
+    background-color: #436be2
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer {
+    flex-grow: 1;
+    margin-top: 1.5rem;
+    width: 100%;
+    min-height: 10rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box {
+    width: 16rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box:hover {
+    cursor: pointer;
+    opacity: 90%
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box:active {
+    transform: scale(.99)
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box:nth-child(1) {
+    background-color: #00c39a
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box:nth-child(2) {
+    background-color: #436be2
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box:nth-child(3) {
+    background-color: #fe6d79
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box .infoIcon {
+    cursor: pointer;
+    height: 1.125rem;
+    float: right;
+    position: relative;
+    margin-top: -1.75rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    transition: .5s
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box .infoIcon:active {
+    transform: scale(.8)
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box .serviceIcon {
+    height: 2.5rem
+}
+
+.heroSection>.container .topContainer .content-1 .services .servicesContainer .box span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    max-width: 15rem;
+    margin: 0 1rem
+}
+
+.heroSection>.container .topContainer .content-2 {
+    width: 55.9375rem;
+    display: flex;
+    flex-direction: column
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars {
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: calc(100% - 3rem);
+    border-radius: 1.25rem;
+    background-color: #1e1b1e
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .logo {
+    display: flex;
+    gap: .75rem;
+    align-items: center
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .logo img {
+    height: 2.25rem
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .logo p {
+    color: #436be2;
+    font-size: 1.25rem;
+    font-weight: 700
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .logo p span {
+    color: #b1bfcf
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls {
+    display: flex;
+    gap: .75rem;
+    align-items: center
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .switch {
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2.125rem;
+    cursor: pointer
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73c0fc;
+    transition: .4s;
+    border-radius: 30px
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .moon svg {
+    fill: #73c0fc;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .sun svg {
+    animation: rotate 15s linear infinite
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .moon svg {
+    animation: tilt 5s linear infinite
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(-10deg)
+    }
+    75% {
+        transform: rotate(10deg)
+    }
+    to {
+        transform: rotate(0)
+    }
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .input:checked+.slider {
+    background-color: #183153
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .input:focus+.slider {
+    box-shadow: 0 0 1px #183153
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls .input:checked+.slider:before {
+    transform: translate(30px)
+}
+
+.heroSection>.container .topContainer .content-2 .mainNavbars .controls #checkbox {
+    display: none
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer {
+    margin-top: 1.25rem;
+    width: 100%;
+    display: flex;
+  
+    gap: 1.25rem;
+    justify-content: space-between;
+    flex-grow: 1
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .imageCarousel {
+    width: 20rem;
+    max-height: 28.8rem;
+    border-radius: 1.25rem;
+    display: flex
+}
+
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .imageCarousel .mySwiper .myImage {
+    border-radius: 1.25rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: #1e1b1e;
+    margin-left: 220%;
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer {
+    flex-grow: 1;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .nameContainer {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: calc(100% - 3rem);
+    border-radius: 1.25rem;
+    background-color: #1e1b1e;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1rem
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .nameContainer .label {
+    color: #8b898c
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .nameContainer .content {
+    color: #fff
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer {
+    padding: 1.5rem;
+    flex-grow: 1;
+    width: calc(100% - 3rem);
+    border-radius: 1.25rem;
+    background-color: #1e1b1e;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .locationDetails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: .4rem;
+    align-items: center;
+    justify-content: space-between
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .locationDetails .label {
+    color: #8b898c
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .locationDetails .content {
+    color: #fff
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .myLocation {
+    margin-top: 1.25rem;
+    background-image: url(/assets/myLocation-886067b0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .myLocation img {
+    height: 2.8rem
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .myLocation img:hover {
+    cursor: pointer;
+    opacity: 90%
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .mapContainer .myLocation img:active {
+    transform: scale(.97)
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer {
+    padding: 0 1.5rem;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: calc(100% - 3rem);
+    border-radius: 1.25rem;
+    background-color: #1e1b1e;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1rem
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer .label {
+    color: #8b898c
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer .socialContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer .socialContainer img {
+    height: 3rem;
+    transition: .3s
+}
+
+.heroSection>.container .topContainer .content-2 .detailsContainer .informationContainer .linksContainer .socialContainer img:hover {
+    cursor: pointer;
+    height: 3.5rem
+}
+
+.heroSection>.container .bottomContainer {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    min-height: 20rem
+}
+
+.heroSection>.container .bottomContainer .content-1 {
+    width: 58rem;
+    min-height: 17rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1.25rem;
+    background-color: #1e1b1e;
+    display: flex;
+    flex-direction: column
+}
+
+.heroSection>.container .bottomContainer .content-1 .top {
+    width: 100%;
+    display: flex;
+    column-gap: 1rem;
+    row-gap: .5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between
+}
+
+.heroSection>.container .bottomContainer .content-1 .top .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff
+}
+
+.heroSection>.container .bottomContainer .content-1 .top .seeAll {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #8b898c;
+    text-decoration: none
+}
+
+.heroSection>.container .bottomContainer .content-1 .top .seeAll:hover {
+    color: #9f9da0;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+@media screen and (max-width: 1530px) {
+   
+    .heroSection>.container .topContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1,
+    .heroSection>.container .topContainer .content-2 {
+        width: 100%;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 {
+        width: 100%;
+    }
+    .heroSection{
+        display: flex;
+        justify-content: space-around;
+    }
+   
+}
+@media screen and (max-width: 1400px) {
+   
+    .heroSection>.container .topContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1,
+    .heroSection>.container .topContainer .content-2 {
+        width: 100%;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 {
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width: 1200px) {
+   
+    .heroSection>.container .topContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1,
+    .heroSection>.container .topContainer .content-2 {
+        width: 100%;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heroSection>.container .topContainer .content-1 .services .servicesContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroSection>.container .topContainer .content-1 .services .servicesContainer .box{
+        padding: 2rem 0;
+    }
+    .heroSection>.container .topContainer .content-1 .services .servicesContainer .box .infoIcon {
+        float: right;
+        position: relative;
+        margin-top: -.75rem;
+        margin-left: auto;
+        margin-right: 1rem;
+        transition: .5s
+    }
+    .myImage{
+        width: 100%;
+    }
+    .heroSection>.container .topContainer .content-2 .detailsContainer {
+        
+        flex-direction: column;
+       
+    }
+    .heroSection>.container .topContainer .content-1 .banner p {
+        font-size: 3rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button {
+        padding: 15px 20px 15px 50px;
+        margin-top: -1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button p {
+        font-size: .8rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .services .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .seeAll {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    
+    .heroSection>.container {
+        padding: 0;
+    }
+    .heroSection>.container .topContainer .content-1 .banner p {
+        font-size: 3rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button {
+        padding: 15px 20px 15px 50px;
+        margin-top: -1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button p {
+        font-size: .8rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .services .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .seeAll {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    
+    .heroSection>.container .topContainer .content-1 .banner p {
+        font-size: 3rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button {
+        padding: 15px 20px 15px 50px;
+        margin-top: -1.5rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .banner .downloadCV-button p {
+        font-size: .8rem;
+    }
+
+    .heroSection>.container .topContainer .content-1 .services .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .title {
+        font-size: 1.5rem;
+    }
+
+    .heroSection>.container .bottomContainer .content-1 .top .seeAll {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('pics/1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .card {
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .card-description {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      width: 90%;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .card:hover .card-description {
+      display: block;
+    }
+    .btn-back {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mt-4 mb-4" style="color: rgba(161, 244, 234, 0.858);">My Projects</h1>
+  <a href="Birog.html" class="btn btn-secondary btn-back">Back</a>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="pics/praf1.png" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title">Personal Website</h5>
+          <div class="card-description">
+            <p>Website that serves as an online portfolio, showcasing the developer's skills, projects, and contact information.</p>
+          </div>
+          <a href="#" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="pics/praf2.png" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title">E-commerce Website</h5>
+          <div class="card-description">
+            <p>Platform for selling products online.</p>
+          </div>
+          <a href="#" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="pics/praf3.png" class="card-img-top" alt="Project 3">
+        <div class="card-body">
+          <h5 class="card-title">Weather App</h5>
+          <div class="card-description">
+            <p>A web application that displays current weather information for a given location.</p>
+          </div>
+          <a href="#" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

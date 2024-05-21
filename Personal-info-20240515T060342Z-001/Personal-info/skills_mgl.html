@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Showcase</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-image: url('pics/gpc.png'); /* Your background image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-top: 50px; /* Add padding to avoid content overlapping with navbar */
+    }
+    .card {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease; /* Adding transition for card hover effect */
+    }
+    .card:hover {
+      transform: scale(1.05); /* Enlarging the card on hover */
+    }
+    .card-body {
+      border-radius: 20px;
+      background-image: url('pics/gphic.jpg'); /* Your background image URL for initial state */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 20px;
+    }
+    img {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: translateY(-5px);
+    }
+    .card-title {
+      color: white;
+    }
+    hr {
+      border-top: 2px solid #fff; /* Changing hr color */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="Rivera.html" class="btn btn-secondary btn-back">Back</a>
+</div>
+
+<div class="container">
+  <h1 class="mt-5 text-center text-white">My Skills as a Graphic Designer</h1>
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill1">
+          <h5 class="card-title text-center">Adobe Photoshop</h5>
+          <hr>
+          <div id="skill1" class="collapse">
+            <p class="card-text text-white">Adobe Photoshop is a versatile tool for graphic designers. I use it for photo editing, digital painting, and creating stunning visual effects.</p>
+            <img src="pics/ps.jpg" alt="Adobe Photoshop" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill2">
+          <h5 class="card-title text-center">Adobe Illustrator</h5>
+          <hr>
+          <div id="skill2" class="collapse">
+            <p class="card-text text-white">Adobe Illustrator is my go-to tool for creating vector graphics. It allows me to design logos, icons, and illustrations with precision and scalability.</p>
+            <img src="pics/ai.png" alt="Adobe Illustrator" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill3">
+          <h5 class="card-title text-center">Adobe InDesign</h5>
+          <hr>
+          <div id="skill3" class="collapse">
+            <p class="card-text text-white">Adobe InDesign is perfect for layout design, such as creating magazines, brochures, and posters. It helps me bring my creative vision to life.</p>
+            <img src="pics/id.png" alt="Adobe InDesign" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Showcase</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-image: url('pics/mrket.png'); /* Your background image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-top: 50px; /* Add padding to avoid content overlapping with navbar */
+    }
+    .card {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease; /* Adding transition for card hover effect */
+    }
+    .card:hover {
+      transform: scale(1.05); /* Enlarging the card on hover */
+    }
+    .card-body {
+      border-radius: 20px;
+      background-image: url('pics/mrketmanger.jpg'); /* Your background image URL for initial state */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 20px;
+    }
+    img {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: translateY(-5px);
+    }
+    .card-title {
+      color: white;
+    }
+    hr {
+      border-top: 2px solid #fff; /* Changing hr color */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="Garcia.html" class="btn btn-secondary btn-back">Back</a>
+</div>
+
+<div class="container">
+  <h1 class="mt-5 text-center text-white">Marketing Manager Skills</h1>
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill1">
+          <h5 class="card-title text-center text-white">Strategic Planning</h5><hr>
+          <div id="skill1" class="collapse">
+            <p class="card-text text-white">Strategic planning involves setting goals, determining actions to achieve those goals, and mobilizing resources to execute the actions effectively. It's essential for guiding business decisions and ensuring long-term success.</p>
+            <img src="pics/splanning.jpg" alt="Strategic Planning Image" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill2">
+          <h5 class="card-title text-center text-white">Digital Marketing</h5><hr>
+          <div id="skill2" class="collapse">
+            <p class="card-text text-white">Digital marketing encompasses various online strategies to promote products or services, including social media marketing, email marketing, content marketing, and search engine optimization (SEO).</p>
+            <img src="pics/dmarket.jpg" alt="Digital Marketing Image" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body" data-toggle="collapse" data-target="#skill3">
+          <h5 class="card-title text-center text-white">Campaign Management</h5><hr>
+          <div id="skill3" class="collapse ">
+            <p class="card-text text-white">Campaign management involves planning, executing, and analyzing marketing campaigns to achieve specific business objectives. It includes tasks such as setting campaign goals, selecting target audiences, creating content, and monitoring campaign performance.</p>
+            <img src="pics/mrketmanger.jpg" alt="Campaign Management Image" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
